@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialize default options for Jitsi Meet conferences.
         URL serverURL;
         try {
-            serverURL = new URL("https://meet.jit.si"); // TODO: usar link de VitalPBX? meet.vitalpbx.org
+            serverURL = new URL("https://meet.jit.si"); // TODO: set up VitalPBX domain
         } catch (MalformedURLException e) {
             e.printStackTrace();
             throw new RuntimeException("Invalid server URL!");
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     public void onButoonClick(View v) {
         EditText editText = findViewById(R.id.conferenceName);
         String text = editText.getText().toString();
-
 
         if (text.length() > 0) {
             // Build options object for joining the conference. The SDK will merge the default
